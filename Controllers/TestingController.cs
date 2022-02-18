@@ -1,6 +1,5 @@
 ﻿using filters_tut.Filters;
 
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace filters_tut.Controllers
@@ -22,7 +21,7 @@ namespace filters_tut.Controllers
 			return "Hello World";
 		}
 
-		
+
 		[TestingAsyncFilterAttribute]
 		[HttpGet("/async-attribute")]
 		public async Task<string> getHelloAsyncAttribute()
@@ -30,7 +29,7 @@ namespace filters_tut.Controllers
 			return "Hello World";
 		}
 
-		
+
 		[TestingFilterAttribute]
 		[TestingAsyncFilterAttribute]
 		//Lower the attribute, faster it will execute and slower it will finish
